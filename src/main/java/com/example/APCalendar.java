@@ -9,6 +9,17 @@ public class APCalendar {
     // Method to implement (a)
     public static int numberOfLeapYears(int year1, int year2) {
         // Your implementation here
+        int lcoounter = 0;
+        while (year1-year2==0) {
+            if(isLeapYear(year1)){
+                lcoounter++;
+                year1++;
+            }
+            else{
+                year1++;
+            }
+        }
+         return lcoounter;
     }
 
     // Helper method provided
@@ -44,6 +55,21 @@ public class APCalendar {
     // Method to implement (b)
     public static int dayOfWeek(int month, int day, int year) {
         // Your implementation here
+        if (year == 2020){
+            return ((dayOfYear(month, day, year)+8+ 1) % 7 == 0 ? 7 : (dayOfYear(month, day, year) +8+ 1) % 7);
+        }
+        else if(year == 2018){        
+        return ((dayOfYear(month, day, year)+ 6+1) % 7 == 0 ? 7 : (dayOfYear(month, day, year) +14) % 7);
+
+        }
+        else{
+            return ((dayOfYear(month, day, year)+ 1) % 7 == 0 ? 7 : (dayOfYear(month, day, year) +4+ 1) % 7);
+        } 
+        
+        
+        
+
+
     }
 
 }

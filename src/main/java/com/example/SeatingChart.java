@@ -8,11 +8,13 @@ public class SeatingChart {
     // Constructor to implement a)
     public SeatingChart(List<Student> studentList, int rows, int cols) {
         // Your Implementation here
+        seats[][] = 
     }
 
     // Method to implement b)
     public int removeAbsentStudents(int allowedAbsences) {
         // Your Implementation here
+
     }
 
     public Student[][] getSeats() {
